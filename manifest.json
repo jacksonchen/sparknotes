@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "SparkNotes Enhancer",
+  "description": "Blocks annoying side content on Sparknotes",
+  "version": "0.0.1",
+
+  "author": "Jackson Chen",
+
+  "content_scripts": [
+  {
+    "js": [ "bin/jquery.min.js", "bin/waituntilexist.js", "js/preloader.js" ],
+    "all_frames": true,
+    "run_at": "document_start",
+    "matches": [ "http://www.sparknotes.com/*",
+                 "https://www.sparknotes.com/*" ]
+  }],
+
+  "permissions": [
+    "http://www.sparknotes.com/"
+  ],
+
+  "icons": {
+    "128": "logo.png"
+  }
+}
